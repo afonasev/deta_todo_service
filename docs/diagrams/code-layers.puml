@@ -1,3 +1,5 @@
+@startuml Code layers
+
 actor user
 participant api
 participant service
@@ -14,3 +16,5 @@ service <- repository: domain data
 service -> service: domain logic
 api <- service: domain data
 user <- api: http response
+
+@enduml
