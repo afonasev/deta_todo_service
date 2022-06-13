@@ -1,0 +1,16 @@
+actor user
+participant api
+participant service
+participant repository
+database database
+
+user -> api: http request
+api -> service: domain command/query
+service -> service: domain logic
+service -> repository: domain action
+repository -> database: sql query
+repository <- database: sql rows
+service <- repository: domain data
+service -> service: domain logic
+api <- service: domain data
+user <- api: http response
