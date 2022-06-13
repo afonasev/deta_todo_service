@@ -24,7 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          make init
+          pip install --upgrade pip poetry
+          poetry install
       - name: Run linters
         run: |
           make lint
