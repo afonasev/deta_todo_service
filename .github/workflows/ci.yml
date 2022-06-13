@@ -1,4 +1,4 @@
-name: Python CI
+name: Quality gate
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.10"]
+        language: ["python"]  # for CodeQL
 
     steps:
       - uses: actions/checkout@v2
@@ -27,9 +28,19 @@ jobs:
           pip install --upgrade pip poetry
           poetry config virtualenvs.create false
           poetry install
+
       - name: Run linters
         run: |
           make lint
+        
       - name: Run tests
         run: |
           make test
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
