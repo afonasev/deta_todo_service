@@ -4,10 +4,9 @@ services:
   api:
     build:
       dockerfile: docker/Dockerfile
-      target: runtime
     command: uvicorn --factory app.app:create_app --reload --no-access-log --use-colors
     ports:
-      - 8080:8080
+      - "8080:8080"
     env_file:
       - ./envs/base.env
       - ./envs/api.env

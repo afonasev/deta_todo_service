@@ -19,7 +19,7 @@ RUN poetry config virtualenvs.create false && \
     pip install --ignore-installed --prefix=/deps -r /dev/stdin
 
 # Runtime image
-FROM python:3.10-slim as dev
+FROM python:3.10-slim
 
 WORKDIR /app
 
