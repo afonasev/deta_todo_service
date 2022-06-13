@@ -10,3 +10,5 @@ updates:
       - "dependabot"
       - "dependencies"
     open-pull-requests-limit: 10
+    assignees:
+      - afonasev
