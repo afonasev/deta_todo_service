@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip poetry
-          poetry install
+          make init
+          source .venv/bin/activate
       - name: Run linters
         run: |
           make lint
