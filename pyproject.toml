@@ -198,13 +198,13 @@ ignore-imports = "no"
 
 [tool.pytest.ini_options]
 # http://doc.pytest.org/en/latest/customize.html
+asyncio_mode = "auto"
 addopts = [
   "--doctest-modules",
   "--log-level=DEBUG",
   "--showlocals",
   "--strict-markers",
   "--verbosity=2",
-# todo   "--asyncio_mode=strict",
 ]
 
 [tool.coverage.run]

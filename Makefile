@@ -52,32 +52,33 @@ git_hooks: ## install git commit and pre-push hooks
 
 .PHONY: test
 test: ## run tests
+	@echo "\n********* RUN TESTS *********\n"
 	pytest --cov=app tests $(args)
 
 .PHONY: lint
 lint: ## run linters
-	@echo "Run linters"
-	@pflake8 $(CODE)
-	@mypy $(CODE)
-	@find $(CODE) -name *.py -exec pyupgrade --py310-plus '{}' '+'
-	@docformatter --check --recursive $(CODE)
-	@autoflake --check --recursive \
+	@echo "\n********* RUN LINTERS *********\n"
+	pflake8 $(CODE)
+	mypy --no-error-summary $(CODE)
+	find $(CODE) -name *.py -exec pyupgrade --py310-plus '{}' '+'
+	docformatter --check --recursive $(CODE)
+	autoflake --check --recursive \
 		--expand-star-imports \
 		--ignore-init-module-imports \
 		--remove-all-unused-imports \
 		--remove-duplicate-keys \
-		--remove-unused-variables $(CODE) > /dev/null 2>&1
-	@pytest --dead-fixtures --dup-fixtures tests
+		--remove-unused-variables $(CODE)
+	pytest --dead-fixtures --dup-fixtures tests
 
 .PHONY: pretty
 pretty: ## run formatters
-	@echo "Run formatters"
-	@find $(CODE) -name *.py -exec pyupgrade --py310-plus --exit-zero-even-if-changed '{}' '+'
-	@docformatter --in-place --recursive $(CODE)
-	@isort $(CODE)
-	@black --quiet $(CODE) > /dev/null 2>&1
-	@unify --in-place --recursive $(CODE)
-	@autoflake --in-place --recursive \
+	@echo "\n********* RUN FORMATTERS *********\n"
+	find $(CODE) -name *.py -exec pyupgrade --py310-plus --exit-zero-even-if-changed '{}' '+'
+	docformatter --in-place --recursive $(CODE)
+	isort $(CODE)
+	black --quiet $(CODE) > /dev/null 2>&1
+	unify --in-place --recursive $(CODE)
+	autoflake --in-place --recursive \
 		--expand-star-imports \
 		--ignore-init-module-imports \
 		--remove-all-unused-imports \
