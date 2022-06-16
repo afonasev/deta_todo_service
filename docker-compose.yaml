@@ -4,7 +4,7 @@ services:
   api:
     build:
       dockerfile: docker/Dockerfile
-    command: uvicorn --factory app.app:create_app --reload --no-access-log --use-colors
+    command: uvicorn --factory app.main:create_app --reload --no-access-log --use-colors
     ports:
       - "8080:8080"
     env_file:
