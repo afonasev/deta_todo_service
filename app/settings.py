@@ -1,4 +1,6 @@
 # noqa:N805
+from functools import cache
+
 from pydantic import AnyHttpUrl, BaseSettings, validator
 
 
@@ -35,4 +37,6 @@ class Settings(BaseSettings):
         env_prefix = ''
 
 
-settings = Settings()
+@cache
+def get_settings() -> Settings:
+    return Settings()

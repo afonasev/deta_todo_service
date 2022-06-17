@@ -5,12 +5,12 @@ from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
 from app.ports.api.users.resources import router as users_router
-from app.settings import settings
+from app.settings import get_settings
 
 
 def create_app() -> FastAPI:
     app = FastAPI(
-        title=settings.PROJECT_NAME,
+        title=get_settings().PROJECT_NAME,
         version='1.0',
     )
 
@@ -24,7 +24,9 @@ def create_app() -> FastAPI:
 
 
 def _configure_logging() -> None:
-    logging.basicConfig(format=settings.LOGGING_FORMAT, level=settings.LOGGING_LEVEL)
+    logging.basicConfig(
+        format=get_settings().LOGGING_FORMAT, level=get_settings().LOGGING_LEVEL
+    )
 
 
 def _configure_sentry() -> None:
@@ -34,10 +36,10 @@ def _configure_sentry() -> None:
 
 def _configure_cors(app: FastAPI) -> None:
     # Set all CORS enabled origins
-    if settings.BACKEND_CORS_ORIGINS:
+    if get_settings().BACKEND_CORS_ORIGINS:
         app.add_middleware(
             CORSMiddleware,
-            allow_origins=settings.BACKEND_CORS_ORIGINS,
+            allow_origins=get_settings().BACKEND_CORS_ORIGINS,
             allow_credentials=True,
             allow_methods=['*'],
             allow_headers=['*'],
