@@ -133,3 +133,5 @@ dmypy.json
 .vscode/
 
 .fuse_hidden*
+
+requirements.txt

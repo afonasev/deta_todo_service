@@ -8,7 +8,7 @@ readme = "README.md"
 keywords = []
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 
 aiodebug = "^2.3.0"  # todo
 deta = {version = "^1.1.0", extras = ["async"]}
@@ -227,7 +227,7 @@ skip_covered = true
 include = '\.pyi?$'
 line-length = 88
 skip-string-normalization = true
-target-version = ['py310']
+target-version = ['py39']
 verbose = true
 
 [tool.isort]

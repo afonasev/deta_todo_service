@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 
 from pydantic import UUID4, BaseModel, EmailStr, Field
 
@@ -18,4 +19,4 @@ class UserCreate(UserBase):
 class UserRead(UserBase):
     id: UUID4
     created_at: datetime
-    deleted_at: datetime | None
+    deleted_at: Optional[datetime]

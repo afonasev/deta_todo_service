@@ -1,0 +1,6 @@
+{
+  "name": "DetaToDoAPi",
+  "description": "https://github.com/afonasev/deta_todo_service",
+  "runtime": "python3.10",
+  "env": []
+}
