@@ -14,6 +14,10 @@ class Settings(BaseSettings):
     )
     LOGGING_LEVEL: str = 'INFO'
 
+    # Application settings
+    DETA_PROJECT_KEY: str
+    USERS_COLLECTION_NAME: str = "users"
+
     @validator('*', pre=True)
     def empty_str_to_none(cls, input_value):  # noqa:N805
         if input_value == '':
@@ -22,6 +26,7 @@ class Settings(BaseSettings):
 
     class Config:
         env_prefix = ''
+        env_file = '.env'
 
 
 @cache

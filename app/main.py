@@ -18,7 +18,7 @@ def create_app() -> FastAPI:
     _configure_sentry()
     _configure_cors(app)
 
-    app.include_router(users_router)
+    app.include_router(users_router, prefix="/api/users")
 
     return app
 

@@ -11,7 +11,7 @@ keywords = []
 python = "^3.9"
 
 aiodebug = "^2.3.0"  # todo
-deta = {version = "^1.1.0", extras = ["async"]}
+deta = {version = "1.1.0a2", extras = ["async"]}
 # requests needed for TestClient
 fastapi = {version = "^0.78.0", extras = ["requests"]}
 fastapi-crudrouter = "^0.8.5"
@@ -60,7 +60,7 @@ doctests = true
 # Plugins:
 max-annotations-complexity = 2
 max-complexity = 6
-max-expression-complexity = 3
+max-expression-complexity = 4
 enable-extensions = "G"
 
 # darglint configuration:
@@ -79,6 +79,7 @@ known-modules = "app:[app],tests:[app,tests]"
 # Ignores:
 ignore = [
     "A003", # 'id' is a python builtin, consider renaming the class attribute
+    "B008", # Do not perform function calls in argument defaults
     "C812", # missing trailing comma -> use autoformatters instead
     "D1", # Missing docstring
     "E501", # line too long -> use autoformatters instead
@@ -87,9 +88,12 @@ ignore = [
     "PLR0201", # Method could be a function (no-self-use)
     "PLW0511", # tod.o: ... (fixme)
     "WPS115", # Found upper-case constant in a class
+    "WPS305", # Found `f` string
     "WPS306", # Found class without a base class
+    "WPS404", # Found complex default value
     "WPS420", # Found wrong keyword: pass
     "WPS431", # Found nested class
+    "WPS501", # Found `finally` in `try` block without `except`
     "WPS604", # Found incorrect node inside `class` body
 ]
 
