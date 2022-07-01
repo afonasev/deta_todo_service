@@ -17,7 +17,7 @@ fastapi = {version = "^0.78.0", extras = ["requests"]}
 fastapi-crudrouter = "^0.8.5"
 loguru = "^0.6"
 pydantic = {version = "^1.9.0", extras = ["ujson", "email"]}
-sentry-sdk = "^1.5"
+sentry-sdk = "^1.6"
 uvicorn = {version = "^0.17.0", extras = ["standard"]}
 
 [tool.poetry.dev-dependencies]
