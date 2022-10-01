@@ -22,7 +22,7 @@ uvicorn = {version = "^0.18.2", extras = ["standard"]}
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1.4"
-black = "^22.6"
+black = "^22.8"
 commitizen = "^2.29.2"
 docformatter = "^1.4"
 flake8-awesome = "^1.0"
