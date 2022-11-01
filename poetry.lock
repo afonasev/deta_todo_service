@@ -475,29 +475,29 @@ flake8-plugin-utils = ">=1.0,<2.0"
 
 [[package]]
 name = "flake8-broken-line"
-version = "0.4.0"
+version = "0.5.0"
 description = "Flake8 plugin to forbid backslashes for line breaks"
 category = "dev"
 optional = false
 python-versions = ">=3.6,<4.0"
 
 [package.dependencies]
-flake8 = ">=3.5,<5"
+flake8 = ">=3.5,<6"
 
 [[package]]
 name = "flake8-bugbear"
-version = "22.4.25"
+version = "22.10.27"
 description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 attrs = ">=19.2.0"
 flake8 = ">=3.0.0"
 
 [package.extras]
-dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit"]
+dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit", "tox"]
 
 [[package]]
 name = "flake8-builtins"
@@ -1023,15 +1023,14 @@ python-versions = ">=2.6"
 
 [[package]]
 name = "pep8-naming"
-version = "0.12.1"
+version = "0.13.2"
 description = "Check PEP-8 naming conventions, plugin for flake8"
 category = "dev"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [package.dependencies]
 flake8 = ">=3.9.1"
-flake8-polyfill = ">=1.0.2,<2"
 
 [[package]]
 name = "perflint"
@@ -1677,11 +1676,11 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "wemake-python-styleguide"
-version = "0.16.1"
+version = "0.17.0"
 description = "The strictest and most opinionated python linter ever"
 category = "dev"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
 astor = ">=0.8,<0.9"
@@ -1689,8 +1688,8 @@ attrs = "*"
 darglint = ">=1.2,<2.0"
 flake8 = ">=3.7,<5"
 flake8-bandit = ">=2.1,<4"
-flake8-broken-line = ">=0.3,<0.5"
-flake8-bugbear = ">=20.1,<23.0"
+flake8-broken-line = ">=0.5,<0.6"
+flake8-bugbear = ">=22.9,<23.0"
 flake8-commas = ">=2.0,<3.0"
 flake8-comprehensions = ">=3.1,<4.0"
 flake8-debugger = ">=4.0,<5.0"
@@ -1700,9 +1699,9 @@ flake8-isort = ">=4.0,<5.0"
 flake8-quotes = ">=3.0,<4.0"
 flake8-rst-docstrings = ">=0.2,<0.3"
 flake8-string-format = ">=0.3,<0.4"
-pep8-naming = ">=0.11,<0.13"
+pep8-naming = ">=0.13,<0.14"
 pygments = ">=2.4,<3.0"
-typing_extensions = ">=3.6,<5.0"
+typing_extensions = ">=4.0,<5.0"
 
 [[package]]
 name = "win32-setctime"
@@ -1738,7 +1737,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "33434f21db45ac49e51cd8a54964ca6e41b49fad64ed757683e36462e45e7bc4"
+content-hash = "96594b401c76eddd9f98b9749ac057d004685d0e0e0a957d56de4021305b373b"
 
 [metadata.files]
 aiodebug = [
@@ -1956,12 +1955,12 @@ flake8-breakpoint = [
     {file = "flake8_breakpoint-1.1.0-py3-none-any.whl", hash = "sha256:27e0cb132647f9ef348b4a3c3126e7350bedbb22e8e221cd11712a223855ea0b"},
 ]
 flake8-broken-line = [
-    {file = "flake8-broken-line-0.4.0.tar.gz", hash = "sha256:771aab5aa0997666796fed249d0e48e6c01cdfeca8c95521eea28a38b7ced4c7"},
-    {file = "flake8_broken_line-0.4.0-py3-none-any.whl", hash = "sha256:e9c522856862239a2c7ef2c1de0276fa598572aa864bd4e9c7efc2a827538515"},
+    {file = "flake8-broken-line-0.5.0.tar.gz", hash = "sha256:7c98de9dd1385b71e888709c7f2aee3f0514107ecb5875bc95d0c03392191c97"},
+    {file = "flake8_broken_line-0.5.0-py3-none-any.whl", hash = "sha256:daafb19b67eead0410ce7ba155d51a15b9d020ebe7630d87de9c2b93cedb6703"},
 ]
 flake8-bugbear = [
-    {file = "flake8-bugbear-22.4.25.tar.gz", hash = "sha256:f7c080563fca75ee6b205d06b181ecba22b802babb96b0b084cc7743d6908a55"},
-    {file = "flake8_bugbear-22.4.25-py3-none-any.whl", hash = "sha256:ec374101cddf65bd7a96d393847d74e58d3b98669dbf9768344c39b6290e8bd6"},
+    {file = "flake8-bugbear-22.10.27.tar.gz", hash = "sha256:a6708608965c9e0de5fff13904fed82e0ba21ac929fe4896459226a797e11cd5"},
+    {file = "flake8_bugbear-22.10.27-py3-none-any.whl", hash = "sha256:6ad0ab754507319060695e2f2be80e6d8977cfcea082293089a9226276bd825d"},
 ]
 flake8-builtins = [
     {file = "flake8-builtins-1.5.3.tar.gz", hash = "sha256:09998853b2405e98e61d2ff3027c47033adbdc17f9fe44ca58443d876eb00f3b"},
@@ -2263,8 +2262,8 @@ pbr = [
     {file = "pbr-5.9.0.tar.gz", hash = "sha256:e8dca2f4b43560edef58813969f52a56cef023146cbb8931626db80e6c1c4308"},
 ]
 pep8-naming = [
-    {file = "pep8-naming-0.12.1.tar.gz", hash = "sha256:bb2455947757d162aa4cad55dba4ce029005cd1692f2899a21d51d8630ca7841"},
-    {file = "pep8_naming-0.12.1-py2.py3-none-any.whl", hash = "sha256:4a8daeaeb33cfcde779309fc0c9c0a68a3bbe2ad8a8308b763c5068f86eb9f37"},
+    {file = "pep8-naming-0.13.2.tar.gz", hash = "sha256:93eef62f525fd12a6f8c98f4dcc17fa70baae2f37fa1f73bec00e3e44392fa48"},
+    {file = "pep8_naming-0.13.2-py3-none-any.whl", hash = "sha256:59e29e55c478db69cffbe14ab24b5bd2cd615c0413edf790d47d3fb7ba9a4e23"},
 ]
 perflint = [
     {file = "perflint-0.7.3-py2.py3-none-any.whl", hash = "sha256:e556a82495925ec956ce607b6333564a54a6ebe2146fd47753d4b32aab82c85b"},
@@ -2630,8 +2629,8 @@ websockets = [
     {file = "websockets-10.3.tar.gz", hash = "sha256:fc06cc8073c8e87072138ba1e431300e2d408f054b27047d047b549455066ff4"},
 ]
 wemake-python-styleguide = [
-    {file = "wemake-python-styleguide-0.16.1.tar.gz", hash = "sha256:4fcd78dd55732679b5fc8bc37fd7e04bbaa5cdc1b1a829ad265e8f6b0d853cf6"},
-    {file = "wemake_python_styleguide-0.16.1-py3-none-any.whl", hash = "sha256:202c22ecfee1f5caf0555048602cd52f2435cd57903e6b0cd46b5aaa3f652140"},
+    {file = "wemake-python-styleguide-0.17.0.tar.gz", hash = "sha256:c8869fac392019c2bb3eae4287399245d10d2726b23f1b3c68d1564909c3a71a"},
+    {file = "wemake_python_styleguide-0.17.0-py3-none-any.whl", hash = "sha256:d10b953bbe4fba83a34f4c224a0e1849ede89e486eacfc760690e6c87a28eaae"},
 ]
 win32-setctime = [
     {file = "win32_setctime-1.1.0-py3-none-any.whl", hash = "sha256:231db239e959c2fe7eb1d7dc129f11172354f98361c4fa2d6d2d7e278baa8aad"},

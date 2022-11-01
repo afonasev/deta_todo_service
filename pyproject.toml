@@ -42,7 +42,7 @@ pytest-randomly = "^3.10"
 pyupgrade = "^2.37"
 types-orjson = "^3.6.2"
 unify = "^0.5"
-wemake-python-styleguide = "^0.16"
+wemake-python-styleguide = "^0.17"
 
 [build-system]
 requires = ["poetry>=1.0"]
