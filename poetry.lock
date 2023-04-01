@@ -2008,14 +2008,14 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "pyupgrade"
-version = "2.37.3"
+version = "3.3.1"
 description = "A tool to automatically upgrade syntax for newer versions."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pyupgrade-2.37.3-py2.py3-none-any.whl", hash = "sha256:9746efd064dbf53d7f86d6f88a1d48120f58dbfc378f517768634740ea2225e2"},
-    {file = "pyupgrade-2.37.3.tar.gz", hash = "sha256:1414c7a7c558004cf610e6180716b876814b639b5a5789c3da023c5cdaebcd49"},
+    {file = "pyupgrade-3.3.1-py2.py3-none-any.whl", hash = "sha256:3b93641963df022d605c78aeae4b5956a5296ea24701eafaef9c487527b77e60"},
+    {file = "pyupgrade-3.3.1.tar.gz", hash = "sha256:f88bce38b0ba92c2a9a5063c8629e456e8d919b67d2d42c7ecab82ff196f9813"},
 ]
 
 [package.dependencies]
@@ -2740,4 +2740,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "0419f190a726d3a5cf0e2b90ecfe5dafebc4bd4135239fd421786e8669965f1e"
+content-hash = "aa26be6df1dbf117c68aedde4e8b909fcbf4b31341ab550a6e15957a5a18e918"
