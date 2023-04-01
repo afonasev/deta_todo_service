@@ -938,14 +938,14 @@ pycodestyle = "*"
 
 [[package]]
 name = "flake8-pylint"
-version = "0.1.3"
+version = "0.2.0"
 description = "Flake8 plugin that runs PyLint."
 category = "dev"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "flake8-pylint-0.1.3.tar.gz", hash = "sha256:430e365d65ec088dd5aad85bf54690d802deec805c4c812a43cc30b75ed51beb"},
-    {file = "flake8_pylint-0.1.3-py3-none-any.whl", hash = "sha256:af4f6633cfb7d4bb51311d62856c81df26ddc0d45a5c7f084cd7845d1af3c3b6"},
+    {file = "flake8-pylint-0.2.0.tar.gz", hash = "sha256:f8fc26d458d85965a04f78417f97ae4eaa90c9bafd5c4561b1b4f10c8a9159a3"},
+    {file = "flake8_pylint-0.2.0-py3-none-any.whl", hash = "sha256:3bca617ba28f4c1d3d0aa8f8fb69876b796832463b5e8e024be08c6d60aeb0d4"},
 ]
 
 [package.dependencies]
@@ -953,7 +953,8 @@ flake8 = "*"
 pylint = "*"
 
 [package.extras]
-dev = ["isort", "mypy", "pytest"]
+lint = ["flake8", "isort", "mypy", "unify"]
+test = ["pytest"]
 
 [[package]]
 name = "flake8-pytest"
@@ -2737,4 +2738,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "1bc40ac86c6613f2f8ceb01304ee0d1a88268b5ce8171f68885874555319faa3"
+content-hash = "a8840e1b9133ec70288f6a6fb8d03ea37fda6729e7e3839b14c66529f30f9ec2"
