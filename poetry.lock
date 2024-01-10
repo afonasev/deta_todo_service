@@ -1009,13 +1009,13 @@ pycodestyle = "*"
 
 [[package]]
 name = "flake8-pylint"
-version = "0.2.0"
+version = "0.2.1"
 description = "Flake8 plugin that runs PyLint."
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "flake8-pylint-0.2.0.tar.gz", hash = "sha256:f8fc26d458d85965a04f78417f97ae4eaa90c9bafd5c4561b1b4f10c8a9159a3"},
-    {file = "flake8_pylint-0.2.0-py3-none-any.whl", hash = "sha256:3bca617ba28f4c1d3d0aa8f8fb69876b796832463b5e8e024be08c6d60aeb0d4"},
+    {file = "flake8_pylint-0.2.1-py3-none-any.whl", hash = "sha256:7310149a66e63e1964feff9ed08a564b83e7739c0ca844b3a2778b673bcb4f11"},
+    {file = "flake8_pylint-0.2.1.tar.gz", hash = "sha256:7741f9a63b05768fc4c641c7f6389bc33c91f9ed9bfd59c01540bbb7acc180e3"},
 ]
 
 [package.dependencies]
@@ -3012,4 +3012,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "8f9d1a3a65eb306a0f2eb498b3dd3abe7e678207db96266d4776e110a7c1c742"
+content-hash = "4b7888d2be7078d3e13d51c3df677a62f309e1da5d93dd113f5c329ef6cc2863"
