@@ -13,7 +13,7 @@ python = "^3.9"
 aiodebug = "^2.3.0"  # todo
 deta = {version = "1.2.0", extras = ["async"]}
 # requests needed for TestClient
-fastapi = {version = "^0.110.0", extras = ["requests"]}
+fastapi = {version = "^0.110.3", extras = ["requests"]}
 fastapi-crudrouter = "^0.8.6"
 loguru = "^0.6"
 pydantic = {version = "^1.10.13", extras = ["ujson", "email"]}
