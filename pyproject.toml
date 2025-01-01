@@ -15,7 +15,7 @@ deta = {version = "1.2.0", extras = ["async"]}
 # requests needed for TestClient
 fastapi = {version = "^0.115.5", extras = ["requests"]}
 fastapi-crudrouter = "^0.8.6"
-loguru = "^0.6"
+loguru = "^0.7"
 pydantic = {version = "^1.10.13", extras = ["ujson", "email"]}
 sentry-sdk = "^2.15"
 uvicorn = {version = "^0.32.1", extras = ["standard"]}
