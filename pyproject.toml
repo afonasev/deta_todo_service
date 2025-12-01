@@ -16,7 +16,7 @@ deta = {version = "1.2.0", extras = ["async"]}
 fastapi = {version = "^0.120.4", extras = ["requests"]}
 fastapi-crudrouter = "^0.8.6"
 loguru = "^0.7"
-pydantic = {version = "^1.10.13", extras = ["ujson", "email"]}
+pydantic = {version = "^2.12.5", extras = ["ujson", "email"]}
 sentry-sdk = "^2.43"
 uvicorn = {version = "^0.38.0", extras = ["standard"]}
 
